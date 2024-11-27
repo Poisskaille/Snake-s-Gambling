@@ -1,0 +1,58 @@
+# Fichiers générés par Visual Studio
+.vscode/
+.vs/
+*.vcxproj*
+*.sln
+*.suo
+*.ncb
+*.user
+*.ipch
+*.pdb
+*.obj
+*.idb
+*.ilk
+*.tlog
+*.lastbuildstate
+*.log
+*.sdf
+*.opendb
+*.VC.db
+*.aps
+*.cache
+*.log
+*.tmp
+*.tmp.*
+
+# Dossiers de build
+Build/
+bin/
+debug/
+release/
+x64/
+x86/
+
+# Fichiers de packages et bibliothèque tierces
+packages/
+.vcpkg/
+
+# Exclure les bibliothèques SFML compilées
+*.dll
+*.lib
+*.exp
+
+# Fichiers de sortie de CMake, s'il est utilisé
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Autres fichiers inutiles
+Thumbs.db
+*.bak
+*.orig
+*.swp
+*.DS_Store
+
+# Exclure les fichiers temporaires système
+desktop.ini
+$RECYCLE.BIN/
