@@ -14,14 +14,10 @@
 *.tlog
 *.lastbuildstate
 *.log
-*.sdf
-*.opendb
-*.VC.db
-*.aps
-*.cache
-*.log
 *.tmp
 *.tmp.*
+*.opendb
+*.VC.db
 
 # Dossiers de build
 Build/
@@ -30,29 +26,36 @@ debug/
 release/
 x64/
 x86/
+Debug/
+Release/
+
+# Logs et fichiers temporaires
+*.log
+*.tlog
+*.cache
+*.recipe
+*.bak
+*.orig
+*.swp
+
+# Fichiers exécutables générés
+*.exe
+*.dll
+*.lib
+*.exp
+
+# Fichiers temporaires système
+desktop.ini
+Thumbs.db
+*.DS_Store
+$RECYCLE.BIN/
 
 # Fichiers de packages et bibliothèque tierces
 packages/
 .vcpkg/
 
-# Exclure les bibliothèques SFML compilées
-*.dll
-*.lib
-*.exp
-
-# Fichiers de sortie de CMake, s'il est utilisé
+# Exclure les fichiers de CMake, s'il est utilisé
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
-
-# Autres fichiers inutiles
-Thumbs.db
-*.bak
-*.orig
-*.swp
-*.DS_Store
-
-# Exclure les fichiers temporaires système
-desktop.ini
-$RECYCLE.BIN/
