@@ -18,14 +18,14 @@ float scaleY = WindowY / 1080.0f;
 float speedSlide = 1.0f;
 float targetPosition = 4000.0f * scaleX;
 
-Text Argent, €, Menu3, Menu1, Menu2, BlackJackText, PlinkoTexT, SurvieText;
+Text Argent, €, Menu3, Menu1, Menu2, BlackJackText, PlinkoTexT, SurvieText, DiceText;
 Text ButtonPlay, PlayPlinko, PlayButtonText, ScoreAdversaire, MiseJoueur, MiseAdversaire, BetButtonText1, BetButtonText2, BetButtonText3;
-RectangleShape FondArgent, ReturnButton, Button, MainMenu1, MainMenu2, MainMenu3, LeaveButton;
+RectangleShape FondArgent, ReturnButton, Button, MainMenu1, MainMenu2, MainMenu3,MainMenu4, LeaveButton;
 RectangleShape ButtonPlayPlinko, Score1, Score2, Score3, Separation, Barre1, FondBlackjack, ScoreAdversaireFond, MiseMenuFond;
 RectangleShape BetButton1, BetButton2, BetButton3, PlayButtonBJ, FondMiseJoueur, FondMiseAdversaire, Tirer, Rester, VD;
 CircleShape Balls;
 
-enum State { Menu, Plinko, BlackJack, Survie };
+enum State { Menu, Plinko, BlackJack, Survie, Dice };
 State currentState;
 
 int Mise[5]; // Stocker les mises dans le blackjack
@@ -61,6 +61,8 @@ int posX;
 
 float PlinkoPosX = 1400.0f;
 float PlinkoPosY = 50.0f;
+
+bool isPlayingSurvie = false;
 
 void newPos() {
     PlinkoPosX = (rand() % 200) + 1300.0f;
@@ -146,6 +148,10 @@ void initObjects(Font& font) {
     MainMenu3.setSize(Vector2f(600 * scaleX, 100 * scaleY));
     MainMenu3.setFillColor(Color(190, 237, 202));
     buttons.push_back(&MainMenu3);
+    
+    MainMenu4.setSize(Vector2f(600 * scaleX, 100 * scaleY));
+    MainMenu4.setFillColor(Color(190, 237, 202));
+    buttons.push_back(&MainMenu4);
 
     BlackJackText.setFont(font);
     BlackJackText.setString("- BlackJack");
@@ -164,6 +170,12 @@ void initObjects(Font& font) {
     SurvieText.setCharacterSize(60 * scaleY);
     SurvieText.setPosition(1500 * scaleX, 620 * scaleY);
     SurvieText.setFillColor(Color::Black);
+
+    DiceText.setFont(font);
+    DiceText.setString("- Dice");
+    DiceText.setCharacterSize(60 * scaleY);
+    DiceText.setPosition(1500 * scaleX, 775 * scaleY);
+    DiceText.setFillColor(Color::Black);
 
     // Objets pour le Plinko
     ButtonPlayPlinko.setSize(Vector2f(400 * scaleX, 110 * scaleY));
@@ -347,6 +359,27 @@ int main() {
         window.getSize().y / Background1.getGlobalBounds().height
     );
 
+    Texture OrangeBox;
+    if (!OrangeBox.loadFromFile("../image/e9dnyx0pcqv41-removebg-preview.png")) {
+        return -1;
+    }
+
+    Sprite OrangeBoxSprite(OrangeBox);
+    OrangeBoxSprite.setPosition(500,500);
+    OrangeBoxSprite.setScale(Vector2f(0.35 * scaleX, 0.35 * scaleY));
+
+    Texture FondDice;
+    if (!FondDice.loadFromFile("../image/FondFOXDice.png")) {
+        return -1;
+    }
+
+    Sprite FondDiceSprite(FondDice);
+    FondDiceSprite.setScale(
+        window.getSize().x / FondDiceSprite.getGlobalBounds().width,
+        window.getSize().y / FondDiceSprite.getGlobalBounds().height
+    );
+
+
     Vector2f velocity(0, 0);
     const float gravity = 100.0f * scaleY;
 
@@ -370,18 +403,38 @@ int main() {
                         HovButton.play();
                         SoundPlaying = true;
                         hovering = true;
-                    }
-                    
+                    }                   
                 }
-
             }
 
             if (Keyboard::isKeyPressed(Keyboard::P)) {
                 Score += 50;
-                string scoreString = to_string(Score);
-                €.setString(scoreString);
             }
-
+            if (Keyboard::isKeyPressed(Keyboard::M)) {
+                if (isPlayingSurvie) {
+                    isPlayingSurvie = false;
+                }
+            }
+            if (Keyboard::isKeyPressed(Keyboard::L)) {
+                if (!isPlayingSurvie) {
+                    isPlayingSurvie = true;
+                }
+            }
+            if (isPlayingSurvie) {
+                if (Keyboard::isKeyPressed(Keyboard::Z)) {
+                    OrangeBoxSprite.move(0, -30);
+                }
+                if (Keyboard::isKeyPressed(Keyboard::S)) {
+                    OrangeBoxSprite.move(0, 30);
+                }
+                if (Keyboard::isKeyPressed(Keyboard::Q)) {
+                    OrangeBoxSprite.move(-30, 0);
+                }
+                if (Keyboard::isKeyPressed(Keyboard::D)) {
+                    OrangeBoxSprite.move(30, 0);
+                }
+            }
+            
             // Gérer les clics de la souris
             if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left) {
                 Vector2i mousePos = Mouse::getPosition(window);
@@ -423,6 +476,11 @@ int main() {
                     ButtonMenuSound.play();
                     BackgroundMainSound.stop();
                     currentState = Survie;
+                }
+                if (MainMenu4.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
+                    ButtonMenuSound.play();
+                    BackgroundMainSound.stop();
+                    currentState = Dice;
                 }
                 if (LeaveButton.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
                     window.close();
@@ -491,11 +549,6 @@ int main() {
                                 }
                             }
                         }
-                        
-                        string MiseString = to_string(MiseTotale);
-                        MiseJoueur.setString(MiseString);
-                        string scoreString = to_string(Score);
-                        €.setString(scoreString);
                     }
                     else {
                         if (Tirer.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
@@ -504,8 +557,6 @@ int main() {
                                 if (Resultat > 21) {
                                     isPlayingBj = false;
                                     MiseTotale = 0;
-                                    string MiseString = to_string(MiseTotale);
-                                    MiseJoueur.setString(MiseString);
                                     for (int i = 0; i < 5; i++) {
                                         Mise[i] = 0;
                                     }
@@ -537,10 +588,6 @@ int main() {
                                 cerr << "Perdu !" << endl;
                             }
                             MiseTotale = 0;
-                            string MiseString = to_string(MiseTotale);
-                            MiseJoueur.setString(MiseString);
-                            string scoreString = to_string(Score);
-                            €.setString(scoreString);
                             isPlayingBj = false;
                             for (int i = 0; i < 5; i++) {
                                 Mise[i] = 0;
@@ -554,8 +601,6 @@ int main() {
                     if (!isPlinkoPlaying && ButtonPlayPlinko.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
                         if (!isBallFalling) {
                             Score -= 10;
-                            string scoreString = to_string(Score);
-                            €.setString(scoreString);
                             isBallFalling = true;
                             newPos();
                             Balls.setPosition(PlinkoPosX, PlinkoPosY);
@@ -567,8 +612,7 @@ int main() {
             if (Balls.getGlobalBounds().intersects(Score1.getGlobalBounds()) || Balls.getGlobalBounds().intersects(Score2.getGlobalBounds()) || Balls.getGlobalBounds().intersects(Score3.getGlobalBounds())) {
                 if (Balls.getGlobalBounds().intersects(Score1.getGlobalBounds()) || Balls.getGlobalBounds().intersects(Score3.getGlobalBounds())) {
                     Score *= 1.5;
-                    string scoreString = to_string(Score);
-                    €.setString(scoreString);
+                    
                 }
                 isBallFalling = false;
                 velocity.y = 0;
@@ -578,18 +622,26 @@ int main() {
         window.clear(Color::Black);
         HideAllButtons(buttons);
 
+        string scoreString = to_string(Score);
+        €.setString(scoreString);
+
+        string MiseString = to_string(MiseTotale);
+        MiseJoueur.setString(MiseString);
+
         switch (currentState) {
         case Menu:
             if (showMainMenu) {
                 MainMenu1.setPosition(1320 * scaleX, 295 * scaleY);
                 MainMenu2.setPosition(1320 * scaleX, 450 * scaleY);
                 MainMenu3.setPosition(1320 * scaleX, 605 * scaleY);
+                MainMenu4.setPosition(1320 * scaleX, 760 * scaleY);
                 
 
                 window.draw(Background1);
                 window.draw(MainMenu1);
                 window.draw(MainMenu2);
                 window.draw(MainMenu3);
+                window.draw(MainMenu4);
                 window.draw(Menu3);
                 window.draw(Menu2);
                 window.draw(Menu1);
@@ -597,6 +649,7 @@ int main() {
                 window.draw(BlackJackText);
                 window.draw(PlinkoTexT);
                 window.draw(SurvieText);
+                window.draw(DiceText);
             }
             else {
                 Button.setPosition(1115 * scaleX, 620 * scaleY);
@@ -611,7 +664,6 @@ int main() {
             break;
 
         case Plinko:
-            ReturnButton.setPosition(0, 980 * scaleY);
             window.draw(FondArgent);
             window.draw(Argent);
             window.draw(€);
@@ -626,12 +678,10 @@ int main() {
 
             window.draw(Barre1);
             window.draw(Balls);
-            window.draw(ReturnButton);
             break;
 
         case BlackJack:
             if (!isPlayingBj) {
-                ReturnButton.setPosition(0, 980 * scaleY);
                 BetButton1.setPosition(400 * scaleX, 850 * scaleY);
                 BetButton2.setPosition(800 * scaleX, 850 * scaleY);
                 BetButton3.setPosition(1200 * scaleX, 850 * scaleY);
@@ -650,7 +700,6 @@ int main() {
                 window.draw(PlayButtonText);
                 window.draw(FondMiseJoueur);
                 window.draw(FondMiseAdversaire);
-                window.draw(ReturnButton);
                 window.draw(MiseJoueur);
                 window.draw(VD);
 
@@ -677,15 +726,24 @@ int main() {
                 window.draw(€);
             }
             break;
+
             case Survie:
-                ReturnButton.setPosition(0, 980 * scaleY);
-                window.draw(ReturnButton);
+                window.draw(OrangeBoxSprite);
+                break;
+
+            case Dice:
+                window.draw(FondDiceSprite);
                 break;
         }
 
         if (showMainMenu) {
             LeaveButton.setPosition(1800 * scaleX, 980 * scaleY);
             window.draw(LeaveButton);
+        }
+
+        if (currentState != Menu && !isPlayingBj) {
+            ReturnButton.setPosition(0, 980 * scaleY);
+            window.draw(ReturnButton);
         }
         window.display();
     }
