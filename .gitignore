@@ -1,34 +1,47 @@
-# Ignorer les fichiers générés par le compilateur
+# Fichiers générés par Visual Studio
+.vscode/
+.vs/
+*.sln
+*.suo
+*.vcxproj*
+*.ncb
+*.user
+*.opendb
+*.VC.db
+*.vcxproj.filters
+
+# Fichiers spécifiques à Visual Studio Code
+.vscode/
+
+# Fichiers générés par le compilateur
 *.obj
 *.pdb
 *.ilk
 *.idb
 *.tlog
-*.lastbuildstate
 *.exe
+*.dll
+*.lib
+*.exp
+*.log
 *.recipe
+*.lastbuildstate
 
-# Ignorer les dossiers de build
+# Dossiers de build
 Debug/
 Release/
 x64/
+x86/
 bin/
 Build/
 
-# Fichiers Visual Studio inutiles
-*.vcxproj.*
-.suo
-*.ncb
-*.user
-*.opendb
-*.VC.db
-
-# Fichiers temporaires
+# Fichiers temporaires ou système
 *.tmp
 *.cache
-*.log
-
-# Fichiers système
+*.bak
+*.orig
+*.swp
 *.DS_Store
 desktop.ini
 Thumbs.db
+$RECYCLE.BIN/
