@@ -18,14 +18,14 @@ float scaleY = WindowY / 1080.0f;
 float speedSlide = 1.0f;
 float targetPosition = 4000.0f * scaleX;
 
-Text Argent, €, Menu3, Menu1, Menu2, BlackJackText, PlinkoTexT;
+Text Argent, €, Menu3, Menu1, Menu2, BlackJackText, PlinkoTexT, SurvieText;
 Text ButtonPlay, PlayPlinko, PlayButtonText, ScoreAdversaire, MiseJoueur, MiseAdversaire, BetButtonText1, BetButtonText2, BetButtonText3;
-RectangleShape FondArgent, ReturnButton, Button, MainMenu1, MainMenu2;
+RectangleShape FondArgent, ReturnButton, Button, MainMenu1, MainMenu2, MainMenu3, LeaveButton;
 RectangleShape ButtonPlayPlinko, Score1, Score2, Score3, Separation, Barre1, FondBlackjack, ScoreAdversaireFond, MiseMenuFond;
 RectangleShape BetButton1, BetButton2, BetButton3, PlayButtonBJ, FondMiseJoueur, FondMiseAdversaire, Tirer, Rester, VD;
 CircleShape Balls;
 
-enum State { Menu, Plinko, BlackJack };
+enum State { Menu, Plinko, BlackJack, Survie };
 State currentState;
 
 int Mise[5]; // Stocker les mises dans le blackjack
@@ -102,6 +102,10 @@ void initObjects(Font& font) {
     ReturnButton.setFillColor(Color::Red);
     buttons.push_back(&ReturnButton);
 
+    LeaveButton.setSize(Vector2f(200 * scaleX, 100 * scaleY));
+    LeaveButton.setFillColor(Color(249, 89, 89));
+    buttons.push_back(&LeaveButton);
+
     // Objets du menu principale
     Menu3.setFont(font);
     Menu3.setString("Metal Gear Solid");
@@ -139,6 +143,10 @@ void initObjects(Font& font) {
     MainMenu2.setFillColor(Color(190, 237, 202));
     buttons.push_back(&MainMenu2);
 
+    MainMenu3.setSize(Vector2f(600 * scaleX, 100 * scaleY));
+    MainMenu3.setFillColor(Color(190, 237, 202));
+    buttons.push_back(&MainMenu3);
+
     BlackJackText.setFont(font);
     BlackJackText.setString("- BlackJack");
     BlackJackText.setCharacterSize(60 * scaleY);
@@ -150,6 +158,12 @@ void initObjects(Font& font) {
     PlinkoTexT.setCharacterSize(60 * scaleY);
     PlinkoTexT.setPosition(1500 * scaleX, 465 * scaleY);
     PlinkoTexT.setFillColor(Color::Black);
+
+    SurvieText.setFont(font);
+    SurvieText.setString("- Survie");
+    SurvieText.setCharacterSize(60 * scaleY);
+    SurvieText.setPosition(1500 * scaleX, 620 * scaleY);
+    SurvieText.setFillColor(Color::Black);
 
     // Objets pour le Plinko
     ButtonPlayPlinko.setSize(Vector2f(400 * scaleX, 110 * scaleY));
@@ -362,6 +376,12 @@ int main() {
 
             }
 
+            if (Keyboard::isKeyPressed(Keyboard::P)) {
+                Score += 50;
+                string scoreString = to_string(Score);
+                €.setString(scoreString);
+            }
+
             // Gérer les clics de la souris
             if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left) {
                 Vector2i mousePos = Mouse::getPosition(window);
@@ -399,6 +419,14 @@ int main() {
                     BackgroundMainSound.stop();
                     currentState = Plinko;
                 }
+                if (MainMenu3.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
+                    ButtonMenuSound.play();
+                    BackgroundMainSound.stop();
+                    currentState = Survie;
+                }
+                if (LeaveButton.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
+                    window.close();
+                }
                 if (currentState != BlackJack) {
                     if (MainMenu1.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
                         BackgroundMainSound.stop();
@@ -418,43 +446,52 @@ int main() {
                                 drawFirstCard();
                             }                          
                         }
-                        if (BetButton1.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
-                            bool miseAppliquee = false;
-                            for (int i = 0; i < 5; i++) {
-                                if (Mise[i] == 0) {
-                                    Mise[i] = 10;
-                                    Score -= 10;
-                                    MiseTotale += 10;
-                                    miseAppliquee = true;
-                                    break;
+                        if (Score >= 10) {
+                            if (BetButton1.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
+                                bool miseAppliquee = false;
+                                for (int i = 0; i < 5; i++) {
+                                    if (Mise[i] == 0) {
+                                        Mise[i] = 10;
+                                        Score -= 10;
+                                        MiseTotale += 10;
+                                        miseAppliquee = true;
+                                        break;
+                                    }
                                 }
                             }
                         }
-                        if (BetButton2.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
-                            bool miseAppliquee = false;
-                            for (int i = 0; i < 5; i++) {
-                                if (Mise[i] == 0) {
-                                    Mise[i] = 20;
-                                    Score -= 20;
-                                    MiseTotale += 20;
-                                    miseAppliquee = true;
-                                    break;
-                                }
-                            }
-                        }
-                        if (BetButton3.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
-                            bool miseAppliquee = false;
 
-                            for (int i = 0; i < 5; i++) {
-                                if (Mise[i] == 0) {
-                                    Mise[i] = 50;
-                                    Score -= 50;
-                                    MiseTotale += 50;
-                                    miseAppliquee = true;
-                                    break;
+                        if (Score >= 20) {
+                            if (BetButton2.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
+                                bool miseAppliquee = false;
+                                for (int i = 0; i < 5; i++) {
+                                    if (Mise[i] == 0) {
+                                        Mise[i] = 20;
+                                        Score -= 20;
+                                        MiseTotale += 20;
+                                        miseAppliquee = true;
+                                        break;
+                                    }
                                 }
                             }
                         }
+                        
+                        if (Score >= 50) {
+                            if (BetButton3.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
+                                bool miseAppliquee = false;
+
+                                for (int i = 0; i < 5; i++) {
+                                    if (Mise[i] == 0) {
+                                        Mise[i] = 50;
+                                        Score -= 50;
+                                        MiseTotale += 50;
+                                        miseAppliquee = true;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        
                         string MiseString = to_string(MiseTotale);
                         MiseJoueur.setString(MiseString);
                         string scoreString = to_string(Score);
@@ -543,20 +580,23 @@ int main() {
 
         switch (currentState) {
         case Menu:
-
             if (showMainMenu) {
                 MainMenu1.setPosition(1320 * scaleX, 295 * scaleY);
                 MainMenu2.setPosition(1320 * scaleX, 450 * scaleY);
+                MainMenu3.setPosition(1320 * scaleX, 605 * scaleY);
+                
 
                 window.draw(Background1);
                 window.draw(MainMenu1);
                 window.draw(MainMenu2);
+                window.draw(MainMenu3);
                 window.draw(Menu3);
                 window.draw(Menu2);
                 window.draw(Menu1);
 
                 window.draw(BlackJackText);
                 window.draw(PlinkoTexT);
+                window.draw(SurvieText);
             }
             else {
                 Button.setPosition(1115 * scaleX, 620 * scaleY);
@@ -637,6 +677,15 @@ int main() {
                 window.draw(€);
             }
             break;
+            case Survie:
+                ReturnButton.setPosition(0, 980 * scaleY);
+                window.draw(ReturnButton);
+                break;
+        }
+
+        if (showMainMenu) {
+            LeaveButton.setPosition(1800 * scaleX, 980 * scaleY);
+            window.draw(LeaveButton);
         }
         window.display();
     }
