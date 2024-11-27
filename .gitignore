@@ -1,61 +1,34 @@
-# Fichiers générés par Visual Studio
-.vscode/
-.vs/
-*.vcxproj*
-*.sln
-*.suo
-*.ncb
-*.user
-*.ipch
-*.pdb
+# Ignorer les fichiers générés par le compilateur
 *.obj
-*.idb
+*.pdb
 *.ilk
+*.idb
 *.tlog
 *.lastbuildstate
-*.log
-*.tmp
-*.tmp.*
+*.exe
+*.recipe
+
+# Ignorer les dossiers de build
+Debug/
+Release/
+x64/
+bin/
+Build/
+
+# Fichiers Visual Studio inutiles
+*.vcxproj.*
+.suo
+*.ncb
+*.user
 *.opendb
 *.VC.db
 
-# Dossiers de build
-Build/
-bin/
-debug/
-release/
-x64/
-x86/
-Debug/
-Release/
-
-# Logs et fichiers temporaires
-*.log
-*.tlog
+# Fichiers temporaires
+*.tmp
 *.cache
-*.recipe
-*.bak
-*.orig
-*.swp
+*.log
 
-# Fichiers exécutables générés
-*.exe
-*.dll
-*.lib
-*.exp
-
-# Fichiers temporaires système
+# Fichiers système
+*.DS_Store
 desktop.ini
 Thumbs.db
-*.DS_Store
-$RECYCLE.BIN/
-
-# Fichiers de packages et bibliothèque tierces
-packages/
-.vcpkg/
-
-# Exclure les fichiers de CMake, s'il est utilisé
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
