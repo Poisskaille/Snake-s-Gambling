@@ -1,0 +1,221 @@
+﻿  Main.cpp
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(50,11): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(94,32): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(97,38): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(108,32): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(114,31): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(120,31): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(130,36): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(144,39): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(150,36): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(161,36): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(199,41): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(213,40): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(223,40): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(233,40): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(243,40): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(253,36): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,75): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,75): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,75): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,75): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,75): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,75): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,75): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,75): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,75): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,63): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,63): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,63): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,63): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,63): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,63): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,63): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,63): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(370,63): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(377,52): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(378,51): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(379,52): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,81): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,81): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,81): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,81): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,81): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,81): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,81): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,81): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,81): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,69): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,69): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,69): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,69): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,69): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,69): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,69): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,69): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(390,69): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,78): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,78): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,78): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,78): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,78): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,78): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,78): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,78): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,78): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,66): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,66): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,66): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,66): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,66): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,66): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,66): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,66): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(397,66): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,82): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,82): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,82): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,82): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,82): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,82): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,82): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,82): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,82): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,70): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,70): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,70): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,70): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,70): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,70): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,70): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,70): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(403,70): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,89): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,89): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,89): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,89): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,89): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,89): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,89): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,89): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,89): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,77): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,77): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,77): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,77): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,77): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,77): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,77): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,77): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(415,77): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,87): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,87): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,87): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,87): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,87): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,87): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,87): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,87): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,87): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,75): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,75): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,75): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,75): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,75): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,75): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,75): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,75): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(421,75): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,87): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,87): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,87): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,87): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,87): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,87): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,87): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,87): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,87): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,75): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,75): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,75): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,75): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,75): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,75): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,75): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,75): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(433,75): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,87): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,87): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,87): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,87): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,87): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,87): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,87): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,87): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,87): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,75): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,75): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,75): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,75): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,75): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,75): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,75): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,75): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(445,75): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,82): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,82): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,82): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,82): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,82): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,82): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,82): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,82): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,82): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,70): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,70): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,70): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,70): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,70): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,70): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,70): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,70): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(464,70): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,83): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,83): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,83): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,83): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,83): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,83): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,83): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,83): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,83): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,71): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,71): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,71): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,71): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,71): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,71): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,71): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,71): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(481,71): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(493,53): warning C4244: '+=' : conversion de 'double' en 'int', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,109): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,109): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,109): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,109): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,109): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,109): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,109): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,109): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,109): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,97): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,97): warning C4244:         with
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,97): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,97): warning C4244:             T=int
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,97): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,97): warning C4244:         and
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,97): warning C4244:         [
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,97): warning C4244:             T=float
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(517,97): warning C4244:         ]
+C:\Users\poiss\OneDrive\Bureau\Setup SFML\Setup SFML\Main.cpp(532,30): warning C4244: '*=' : conversion de 'double' en 'int', perte possible de données
+  Setup SFML.vcxproj -> C:\Users\poiss\OneDrive\Bureau\Setup SFML\x64\Debug\Setup SFML.exe

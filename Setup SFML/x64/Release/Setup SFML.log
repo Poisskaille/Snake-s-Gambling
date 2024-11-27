@@ -1,0 +1,222 @@
+﻿  Main.cpp
+D:\Setup SFML\Setup SFML\Main.cpp(25,11): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(95,45): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(98,36): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(107,46): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(111,46): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(119,38): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(135,48): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(139,42): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(148,38): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(185,59): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(198,44): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(206,44): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(214,44): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(223,42): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(232,42): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(264,75): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(264,75): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(264,75): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(264,75): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(264,75): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(264,75): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(264,75): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(264,75): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(264,75): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(264,63): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(264,63): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(264,63): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(264,63): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(264,63): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(264,63): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(264,63): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(264,63): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(264,63): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(274,81): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(274,81): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(274,81): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(274,81): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(274,81): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(274,81): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(274,81): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(274,81): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(274,81): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(274,69): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(274,69): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(274,69): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(274,69): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(274,69): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(274,69): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(274,69): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(274,69): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(274,69): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(279,78): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(279,78): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(279,78): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(279,78): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(279,78): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(279,78): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(279,78): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(279,78): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(279,78): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(279,66): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(279,66): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(279,66): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(279,66): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(279,66): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(279,66): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(279,66): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(279,66): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(279,66): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(283,82): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(283,82): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(283,82): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(283,82): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(283,82): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(283,82): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(283,82): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(283,82): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(283,82): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(283,70): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(283,70): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(283,70): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(283,70): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(283,70): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(283,70): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(283,70): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(283,70): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(283,70): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(293,89): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(293,89): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(293,89): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(293,89): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(293,89): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(293,89): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(293,89): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(293,89): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(293,89): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(293,77): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(293,77): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(293,77): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(293,77): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(293,77): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(293,77): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(293,77): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(293,77): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(293,77): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(299,87): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(299,87): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(299,87): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(299,87): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(299,87): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(299,87): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(299,87): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(299,87): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(299,87): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(299,75): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(299,75): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(299,75): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(299,75): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(299,75): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(299,75): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(299,75): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(299,75): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(299,75): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(311,87): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(311,87): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(311,87): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(311,87): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(311,87): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(311,87): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(311,87): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(311,87): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(311,87): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(311,75): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(311,75): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(311,75): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(311,75): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(311,75): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(311,75): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(311,75): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(311,75): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(311,75): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(323,87): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(323,87): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(323,87): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(323,87): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(323,87): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(323,87): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(323,87): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(323,87): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(323,87): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(323,75): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(323,75): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(323,75): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(323,75): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(323,75): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(323,75): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(323,75): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(323,75): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(323,75): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(342,82): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(342,82): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(342,82): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(342,82): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(342,82): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(342,82): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(342,82): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(342,82): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(342,82): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(342,70): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(342,70): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(342,70): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(342,70): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(342,70): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(342,70): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(342,70): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(342,70): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(342,70): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(359,83): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(359,83): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(359,83): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(359,83): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(359,83): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(359,83): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(359,83): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(359,83): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(359,83): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(359,71): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(359,71): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(359,71): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(359,71): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(359,71): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(359,71): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(359,71): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(359,71): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(359,71): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(371,53): warning C4244: '+=' : conversion de 'double' en 'int', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(395,109): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(395,109): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(395,109): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(395,109): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(395,109): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(395,109): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(395,109): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(395,109): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(395,109): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(395,97): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+D:\Setup SFML\Setup SFML\Main.cpp(395,97): warning C4244:         with
+D:\Setup SFML\Setup SFML\Main.cpp(395,97): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(395,97): warning C4244:             T=int
+D:\Setup SFML\Setup SFML\Main.cpp(395,97): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(395,97): warning C4244:         and
+D:\Setup SFML\Setup SFML\Main.cpp(395,97): warning C4244:         [
+D:\Setup SFML\Setup SFML\Main.cpp(395,97): warning C4244:             T=float
+D:\Setup SFML\Setup SFML\Main.cpp(395,97): warning C4244:         ]
+D:\Setup SFML\Setup SFML\Main.cpp(410,30): warning C4244: '*=' : conversion de 'double' en 'int', perte possible de données
+  Génération de code en cours
+  1 of 106 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Fin de la génération du code
+LINK : fatal error LNK1105: nous n’avons pas pu fermer le fichier ’D:\Setup SFML\x64\Release\Setup SFML.exe’; code d’erreur 1224
