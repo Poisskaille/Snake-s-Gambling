@@ -6,6 +6,9 @@
 #include<cstdlib>
 #include<cmath>
 #include<vector>
+#include<thread>
+#include<conio.h>
+#include<chrono>
 
 using namespace std;
 using namespace sf;
@@ -21,10 +24,10 @@ float targetPosition = 4000.0f * scaleX;
 Text Argent, €, Menu3, Menu1, Menu2, BlackJackText, PlinkoTexT, SurvieText, DiceText;
 Text ButtonPlay, PlayPlinko, PlayButtonText, ScoreAdversaire, MiseJoueur, MiseAdversaire, BetButtonText1, BetButtonText2, BetButtonText3, PlayDice, DiceScore;
 Text DiceBet1, DiceBet2, MiseTotalText;
-RectangleShape FondArgent, ReturnButton, Button, MainMenu1, MainMenu2, MainMenu3,MainMenu4, LeaveButton, PlayButtonDice; 
+RectangleShape FondArgent, ReturnButton, Button, MainMenu1, MainMenu2, MainMenu3, MainMenu4, LeaveButton, PlayButtonDice, PlayButtonSurvie;
 RectangleShape ButtonPlayPlinko, Score1, Score2, Score3, Separation, Barre1, FondBlackjack, ScoreAdversaireFond, MiseMenuFond;
 RectangleShape BetButton1, BetButton2, BetButton3, PlayButtonBJ, FondMiseJoueur, FondMiseAdversaire, Tirer, Rester;
-CircleShape Balls;
+CircleShape Balls, SurvieBall, ScorePlus;
 
 enum State { Menu, Plinko, BlackJack, Survie, Dice };
 State currentState;
@@ -69,6 +72,17 @@ int nbDiceBet1 = 0;
 int nbDiceBet2 = 51;
 int multiplicateur;
 
+float y = (rand() % 10) + 1;
+void newY() {
+     y = (rand() % 10) + 1;
+}
+
+float GreenX, GreenY;
+void NewPlusPos() {
+    GreenX = (rand() % 1000) + 100;
+    GreenY = (rand() % 800) + 100;
+}
+
 void newPos() {
     PlinkoPosX = (rand() % 200) + 1300.0f;
     PlinkoPosY = (rand() % 50) + 20.0f;
@@ -92,7 +106,7 @@ void drawCard() {
 
 int nDiceScore;
 void newDiceScore() {
-    nDiceScore = (rand() % 100); 
+    nDiceScore = (rand() % 100);
 }
 
 void initObjects(Font& font) {
@@ -337,11 +351,21 @@ void initObjects(Font& font) {
     MiseTotalText.setString("50");
     MiseTotalText.setFillColor(Color::Black);
     MiseTotalText.setPosition(930 * scaleX, 450 * scaleY);
+
+    //Survie
+
+    SurvieBall.setRadius(15 * scaleY);
+    SurvieBall.setFillColor(Color::Red);
+    SurvieBall.setPosition(500, 500);
+
+    ScorePlus.setRadius(20 * scaleY);
+    ScorePlus.setFillColor(Color::Green);
+    ScorePlus.setPosition(900, 900);
 }
 
 int main() {
     srand(static_cast<unsigned int>(time(nullptr)));
-    RenderWindow window(VideoMode(WindowX, WindowY), "Metal Gear Gambling",Style::Fullscreen);
+    RenderWindow window(VideoMode(WindowX, WindowY), "Metal Gear Gambling", Style::Fullscreen);
     window.setFramerateLimit(60);
     currentState = Menu;
 
@@ -357,7 +381,7 @@ int main() {
     if (!MainMenuSound.loadFromFile("../son/MenuSelect.wav")) {
         return -1;
     }
-   Sound ButtonMainSound;
+    Sound ButtonMainSound;
     ButtonMainSound.setBuffer(MainMenuSound);
 
     SoundBuffer MenuSound;
@@ -406,7 +430,7 @@ int main() {
     }
 
     Sprite OrangeBoxSprite(OrangeBox);
-    OrangeBoxSprite.setPosition(500,500);
+    OrangeBoxSprite.setPosition(500, 500);
     OrangeBoxSprite.setScale(Vector2f(0.35 * scaleX, 0.35 * scaleY));
 
     Texture FondDice;
@@ -420,11 +444,25 @@ int main() {
         window.getSize().y / FondDiceSprite.getGlobalBounds().height
     );
 
+    Texture FondFox;
+    if (!FondFox.loadFromFile("../image/FondFOX.png")) {
+        return -1;
+    }
+
+    Sprite FondSurvie(FondFox);
+    FondSurvie.setScale(
+        window.getSize().x / FondSurvie.getGlobalBounds().width,
+        window.getSize().y / FondSurvie.getGlobalBounds().height
+    );
 
     Vector2f velocity(0, 0);
     const float gravity = 100.0f * scaleY;
 
+    Vector2f vitesse(50.5f, y);
+
     float deltaTime = 0.016f;
+
+    Vector2f Boxposition = OrangeBoxSprite.getPosition();
 
     initObjects(font);
 
@@ -467,8 +505,9 @@ int main() {
                     Mise[i] = 0;
                 }
             }
-            if (isPlayingSurvie) {
-                if (Keyboard::isKeyPressed(Keyboard::Z)) {
+
+            if (isPlayingSurvie || currentState == Dice) {
+                if (Keyboard::isKeyPressed(Keyboard::Z) || Keyboard::isKeyPressed(Keyboard::Up)) {
                     switch (currentState) {
                     case Survie:
                         OrangeBoxSprite.move(0, -30);
@@ -480,7 +519,7 @@ int main() {
                         break;
                     }
                 }
-                if (Keyboard::isKeyPressed(Keyboard::S)) {
+                if (Keyboard::isKeyPressed(Keyboard::S) || Keyboard::isKeyPressed(Keyboard::Down)) {
                     switch (currentState) {
                     case Survie:
                         OrangeBoxSprite.move(0, 30);
@@ -492,7 +531,7 @@ int main() {
                         break;
                     }
                 }
-                if (Keyboard::isKeyPressed(Keyboard::Q)) {
+                if (Keyboard::isKeyPressed(Keyboard::Q) || Keyboard::isKeyPressed(Keyboard::Left)) {
                     switch (currentState) {
                     case Survie:
                         OrangeBoxSprite.move(-30, 0);
@@ -504,7 +543,7 @@ int main() {
                         break;
                     }
                 }
-                if (Keyboard::isKeyPressed(Keyboard::D)) {
+                if (Keyboard::isKeyPressed(Keyboard::D) || Keyboard::isKeyPressed(Keyboard::Right)) {
                     switch (currentState) {
                     case Survie:
                         OrangeBoxSprite.move(30, 0);
@@ -714,6 +753,23 @@ int main() {
             }
         }
 
+        if (SurvieBall.getPosition().x <= 100 || SurvieBall.getPosition().x + SurvieBall.getRadius() * 2 >= 1920) {
+            vitesse.x = -vitesse.x;
+        }
+
+        if (SurvieBall.getPosition().y <= 100 || SurvieBall.getPosition().y + SurvieBall.getRadius() * 2 >= 1080) {
+            vitesse.y = -vitesse.y;
+        }
+        if (SurvieBall.getGlobalBounds().intersects(OrangeBoxSprite.getGlobalBounds())) {
+            isPlayingSurvie = false;
+        }
+
+        if (ScorePlus.getGlobalBounds().intersects(OrangeBoxSprite.getGlobalBounds())) {
+            Score += 10;
+            NewPlusPos();
+            ScorePlus.setPosition(GreenX, GreenY);
+        }
+
         window.clear(Color::Black);
         HideAllButtons(buttons);
 
@@ -835,7 +891,15 @@ int main() {
             break;
 
             case Survie:
+                window.draw(FondSurvie);
                 window.draw(OrangeBoxSprite);
+                window.draw(SurvieBall);
+                window.draw(€);
+                window.draw(ScorePlus);
+                if (isPlayingSurvie) {
+                    SurvieBall.move(vitesse);
+                }
+                              
                 break;
 
             case Dice:
