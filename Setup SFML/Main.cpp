@@ -20,7 +20,7 @@ float targetPosition = 4000.0f * scaleX;
 
 Text Argent, €, Menu3, Menu1, Menu2, BlackJackText, PlinkoTexT, SurvieText, DiceText;
 Text ButtonPlay, PlayPlinko, PlayButtonText, ScoreAdversaire, MiseJoueur, MiseAdversaire, BetButtonText1, BetButtonText2, BetButtonText3, PlayDice, DiceScore;
-Text DiceBet1, DiceBet2;
+Text DiceBet1, DiceBet2, MiseTotalText;
 RectangleShape FondArgent, ReturnButton, Button, MainMenu1, MainMenu2, MainMenu3,MainMenu4, LeaveButton, PlayButtonDice; 
 RectangleShape ButtonPlayPlinko, Score1, Score2, Score3, Separation, Barre1, FondBlackjack, ScoreAdversaireFond, MiseMenuFond;
 RectangleShape BetButton1, BetButton2, BetButton3, PlayButtonBJ, FondMiseJoueur, FondMiseAdversaire, Tirer, Rester;
@@ -67,6 +67,7 @@ bool isPlayingSurvie = false;
 
 int nbDiceBet1 = 0;
 int nbDiceBet2 = 51;
+int multiplicateur;
 
 void newPos() {
     PlinkoPosX = (rand() % 200) + 1300.0f;
@@ -240,33 +241,33 @@ void initObjects(Font& font) {
 
     // Boutons de mise
     BetButton1.setSize(Vector2f(200 * scaleX, 100 * scaleY));
-    BetButton1.setFillColor(Color::White);
+    BetButton1.setFillColor(Color(123, 125, 107));
     buttons.push_back(&BetButton1);
 
     BetButtonText1.setFont(font);
     BetButtonText1.setString("10 €");
     BetButtonText1.setCharacterSize(60 * scaleY);
-    BetButtonText1.setPosition(450, 860);
+    BetButtonText1.setPosition(530, 960);
     BetButtonText1.setFillColor(Color::Black);
 
     BetButton2.setSize(Vector2f(200 * scaleX, 100 * scaleY));
-    BetButton2.setFillColor(Color::White);
+    BetButton2.setFillColor(Color(123, 125, 107));
     buttons.push_back(&BetButton2);
 
     BetButtonText2.setFont(font);
     BetButtonText2.setString("20 €");
     BetButtonText2.setCharacterSize(60 * scaleY);
-    BetButtonText2.setPosition(850 * scaleX, 860 * scaleY);
+    BetButtonText2.setPosition(920 * scaleX, 960 * scaleY);
     BetButtonText2.setFillColor(Color::Black);
 
     BetButton3.setSize(Vector2f(200 * scaleX, 100 * scaleY));
-    BetButton3.setFillColor(Color::White);
+    BetButton3.setFillColor(Color(123, 125, 107));
     buttons.push_back(&BetButton3);
 
     BetButtonText3.setFont(font);
     BetButtonText3.setString("50 €");
     BetButtonText3.setCharacterSize(60 * scaleY);
-    BetButtonText3.setPosition(1250 * scaleX, 860 * scaleY);
+    BetButtonText3.setPosition(1320 * scaleX, 960 * scaleY);
     BetButtonText3.setFillColor(Color::Black);
 
     PlayButtonBJ.setSize(Vector2f(500 * scaleX, 100 * scaleY));
@@ -330,6 +331,12 @@ void initObjects(Font& font) {
     DiceBet2.setString("85");
     DiceBet2.setFillColor(Color::Black);
     DiceBet2.setPosition(1550 * scaleX, 450 * scaleY);
+
+    MiseTotalText.setFont(font);
+    MiseTotalText.setCharacterSize(90 * scaleY);
+    MiseTotalText.setString("50");
+    MiseTotalText.setFillColor(Color::Black);
+    MiseTotalText.setPosition(930 * scaleX, 450 * scaleY);
 }
 
 int main() {
@@ -454,6 +461,12 @@ int main() {
                     isPlayingSurvie = true;
                 }
             }
+            if (Keyboard::isKeyPressed(Keyboard::R)) {
+                MiseTotale = 0;
+                for (int i = 0; i < 5; i++) {
+                    Mise[i] = 0;
+                }
+            }
             if (isPlayingSurvie) {
                 if (Keyboard::isKeyPressed(Keyboard::Z)) {
                     switch (currentState) {
@@ -461,7 +474,7 @@ int main() {
                         OrangeBoxSprite.move(0, -30);
                         break;
                     case Dice:
-                        if (nbDiceBet1 != 50) {
+                        if (nbDiceBet1 != nbDiceBet2 - 1) {
                             nbDiceBet1 += 1;
                         }                      
                         break;
@@ -485,7 +498,7 @@ int main() {
                         OrangeBoxSprite.move(-30, 0);
                         break;
                     case Dice:
-                        if (nbDiceBet2 != 51) {
+                        if (nbDiceBet2 != nbDiceBet1 + 1) {
                             nbDiceBet2 -= 1;
                         }
                         break;
@@ -526,6 +539,7 @@ int main() {
                         Menu1.setPosition(110 * scaleX,270 * scaleY);
                         ButtonMainSound.play();
                         BackgroundMainSound.play();
+                        BackgroundMainSound.setLoop(true);
                         MainButtonPressed = true;
                         showMainMenu = true;
                     }
@@ -533,6 +547,7 @@ int main() {
                 if (ReturnButton.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
                     ExButtonSound.play();
                     BackgroundMainSound.play();
+                    BackgroundMainSound.setLoop(true);
                     currentState = Menu;
                     isPlayingBj = false;
                     isPlinkoPlaying = false;
@@ -555,8 +570,7 @@ int main() {
                 if (LeaveButton.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
                     window.close();
                 }
-                if (currentState != BlackJack) {
-                    if (MainMenu1.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
+                if (MainMenu1.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
                         BackgroundMainSound.stop();
                         ButtonMenuSound.play();
                         currentState = BlackJack;
@@ -564,13 +578,13 @@ int main() {
                             Mise[i] = 0;
                         }
                     }
-                }
 
-                if (currentState == BlackJack) {
-                    if (!isPlayingBj) {
+
+                    if (!isPlayingBj || currentState == Dice) {
                         if (PlayButtonBJ.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
                             if (MiseTotale != 0) {
                                 isPlayingBj = true;
+                                Score -= MiseTotale;
                                 drawFirstCard();
                             }                          
                         }
@@ -580,7 +594,6 @@ int main() {
                                 for (int i = 0; i < 5; i++) {
                                     if (Mise[i] == 0) {
                                         Mise[i] = 10;
-                                        Score -= 10;
                                         MiseTotale += 10;
                                         miseAppliquee = true;
                                         break;
@@ -595,7 +608,6 @@ int main() {
                                 for (int i = 0; i < 5; i++) {
                                     if (Mise[i] == 0) {
                                         Mise[i] = 20;
-                                        Score -= 20;
                                         MiseTotale += 20;
                                         miseAppliquee = true;
                                         break;
@@ -611,7 +623,6 @@ int main() {
                                 for (int i = 0; i < 5; i++) {
                                     if (Mise[i] == 0) {
                                         Mise[i] = 50;
-                                        Score -= 50;
                                         MiseTotale += 50;
                                         miseAppliquee = true;
                                         break;
@@ -664,8 +675,7 @@ int main() {
                             }
 
                         }
-                    }
-                }
+                    }               
 
                 if (currentState == Plinko) {
                     if (!isPlinkoPlaying && ButtonPlayPlinko.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
@@ -679,9 +689,20 @@ int main() {
                 }
 
                 if (PlayButtonDice.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
-                    newDiceScore();
-                }
+                    if (Score - MiseTotale < 0 || nbDiceBet2 - nbDiceBet1 > 80) {
+                        cerr << "Impossible de lancer la partie" << endl;
+                    }
+                    else {
+                        newDiceScore();
+                        Score -= MiseTotale;
 
+                        int const K = 100;
+                        multiplicateur = K / (nbDiceBet2 - nbDiceBet1) + 1;
+                        if (nDiceScore >= nbDiceBet1 && nDiceScore <= nbDiceBet2) {
+                            Score += MiseTotale * multiplicateur;
+                        }
+                    }
+                }                   
             }
             if (Balls.getGlobalBounds().intersects(Score1.getGlobalBounds()) || Balls.getGlobalBounds().intersects(Score2.getGlobalBounds()) || Balls.getGlobalBounds().intersects(Score3.getGlobalBounds())) {
                 if (Balls.getGlobalBounds().intersects(Score1.getGlobalBounds()) || Balls.getGlobalBounds().intersects(Score3.getGlobalBounds())) {
@@ -710,6 +731,9 @@ int main() {
 
         string DiceBet2String = to_string(nbDiceBet2);
         DiceBet2.setString(DiceBet2String);
+
+        string MiseTotalString = to_string(MiseTotale);
+        MiseTotalText.setString(MiseTotalString);
 
         switch (currentState) {
         case Menu:
@@ -816,13 +840,20 @@ int main() {
 
             case Dice:
                 window.draw(FondDiceSprite);
-                BetButton1.setPosition(400 * scaleX, 950 * scaleY);
-                BetButton2.setPosition(800 * scaleX, 950 * scaleY);
-                BetButton3.setPosition(1200 * scaleX, 950 * scaleY);
+                BetButton1.setPosition(465 * scaleX, 950 * scaleY);
+                BetButton2.setPosition(865 * scaleX, 950 * scaleY);
+                BetButton3.setPosition(1265 * scaleX, 950 * scaleY);
 
                 PlayButtonDice.setPosition(831 * scaleX, 750 * scaleY);
 
                 window.draw(BetButton1);
+                window.draw(BetButton2);
+                window.draw(BetButton3);
+                window.draw(BetButtonText1);
+                window.draw(BetButtonText2);
+                window.draw(BetButtonText3);
+                window.draw(MiseTotalText);
+                window.draw(€);
                 window.draw(PlayButtonDice);
                 window.draw(PlayDice);
                 window.draw(DiceScore);
