@@ -21,7 +21,7 @@ float scaleY = WindowY / 1080.0f;
 
 Text €, Menu3, Menu1, Menu2, BlackJackText, PlinkoTexT, SurvieText, DiceText, TextNON, Information1, Information2;
 Text ButtonPlay, PlayPlinko, PlayButtonText, MiseJoueur, BetButtonText1, BetButtonText2, BetButtonText3, PlayDice, DiceScore;
-Text DiceBet1, DiceBet2, MiseTotalText, VotreMise, ResultatJoueurText, ResultatAdversaireText;
+Text DiceBet1, DiceBet2, MiseTotalText, VotreMise, ResultatJoueurText, ResultatAdversaireText, PressZ, PressD;
 RectangleShape ReturnButton, Button, MainMenu1, MainMenu2, MainMenu3, MainMenu4, LeaveButton, PlayButtonDice, PlayButtonSurvie;
 RectangleShape ButtonPlayPlinko, Score1, Score2, Score3, Separation, Barre1, FondBlackjack;
 RectangleShape BetButton1, BetButton2, BetButton3, PlayButtonBJ, FondMiseJoueur, Tirer, Rester, ResultatJoueurBack, ResultatAdversaireBack;
@@ -126,6 +126,18 @@ void newDiceScore() {
 
 // Y'a trop d'objet faut mieux fermer la classe, il n'y a rien d'interessant dedans
 void initObjects(Font& font) {
+
+    PressZ.setFont(font);
+    PressZ.setString("Z pour augmenter   S pour diminueur");
+    PressZ.setCharacterSize(50);
+    PressZ.setFillColor(Color(64, 64, 56));
+    PressZ.setPosition(70, 550);
+
+    PressD.setFont(font);
+    PressD.setString("D pour augmenter   Q pour diminueur");
+    PressD.setCharacterSize(50);
+    PressD.setFillColor(Color(64, 64, 56));
+    PressD.setPosition(1280, 550);
 
     VotreMise.setFont(font);
     VotreMise.setString("Votre mise :");
@@ -970,7 +982,7 @@ int main() {
                 }                             
                 break;
             case Dice:
-                window.draw(FondDiceSprite);
+                window.draw(FondFoxBJ);
                 BetButton1.setPosition(465 * scaleX, 950 * scaleY);
                 BetButton2.setPosition(865 * scaleX, 950 * scaleY);
                 BetButton3.setPosition(1265 * scaleX, 950 * scaleY);
@@ -990,6 +1002,8 @@ int main() {
                 window.draw(DiceScore);
                 window.draw(DiceBet1);
                 window.draw(DiceBet2);
+                window.draw(PressZ);
+                window.draw(PressD);
                 
                 break;
         }
