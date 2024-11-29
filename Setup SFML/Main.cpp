@@ -18,8 +18,6 @@ int WindowY = 1080;
 
 float scaleX = WindowX / 1920.0f;
 float scaleY = WindowY / 1080.0f;
-float speedSlide = 1.0f;
-float targetPosition = 4000.0f * scaleX;
 
 Text €, Menu3, Menu1, Menu2, BlackJackText, PlinkoTexT, SurvieText, DiceText, TextNON, Information1, Information2;
 Text ButtonPlay, PlayPlinko, PlayButtonText, MiseJoueur, BetButtonText1, BetButtonText2, BetButtonText3, PlayDice, DiceScore;
@@ -45,8 +43,7 @@ void HideAllButtons(vector<RectangleShape*>& buttons) {
     }
 }
 
-// Pour stocker les balles du mini jeu de survie;
-vector<CircleShape*> balles;
+#pragma region Initialisation des variables
 
 bool isPlayingBj = false;
 int MiseTotale;
@@ -63,10 +60,14 @@ bool showMainMenu = false;
 bool MainButtonPressed = false;
 bool IsAnimation = false;
 
+bool HelpList = false;
+
 bool isPlinkoPlaying = false;
 bool isBallFalling = false;
 
 int posX;
+
+float deltaTime = 0.016f;
 
 float PlinkoPosX = 1400.0f;
 float PlinkoPosY = 50.0f;
@@ -77,12 +78,19 @@ int nbDiceBet1 = 0;
 int nbDiceBet2 = 51;
 int multiplicateur;
 
+float speed = 2.0f;
+
+int nDiceScore;
+
+float GreenX, GreenY;
+
+#pragma endregion Initialisation des variables
+
 float y = (rand() % 20) + 1;
 void newY() {
      y = (rand() % 20) + 1;
 }
 
-float GreenX, GreenY;
 void NewPlusPos() {
     GreenX = (rand() % 1000) + 100;
     GreenY = (rand() % 800) + 100;
@@ -112,7 +120,6 @@ void drawCard() {
     Resultat += newCarte;
 }
 
-int nDiceScore;
 void newDiceScore() {
     nDiceScore = (rand() % 100);
 }
@@ -392,6 +399,7 @@ int main() {
         return -1;
     }
 
+#pragma region Sons et Textures
     // Initialisation de tous les sons nécessaires pour le menu
     SoundBuffer MainMenuSound;
     if (!MainMenuSound.loadFromFile("../son/MenuSelect.wav")) {
@@ -446,7 +454,7 @@ int main() {
     }
 
     Sprite OrangeBoxSprite(OrangeBox);
-    OrangeBoxSprite.setPosition(900, 900);
+    OrangeBoxSprite.setPosition(900, 500);
     OrangeBoxSprite.setScale(Vector2f(0.25 * scaleX, 0.25 * scaleY));
 
     Texture FondDice;
@@ -500,9 +508,7 @@ int main() {
     RevolverOcelotArt.setPosition(1300, 200);
     RevolverOcelotArt.setScale(0.25f * scaleX, 0.25f * scaleY);
 
-    Vector2f vitesse(50.5f, 5.f);
-
-    float deltaTime = 0.016f;
+#pragma endregion Sons et Textures
 
     initObjects(font);
 
@@ -513,6 +519,8 @@ int main() {
                 window.close();
 
             Vector2i mousePos = Mouse::getPosition(window);
+
+#pragma region Boutons & Keyboard
             
             for (auto button : buttons) {
                 if (button->getGlobalBounds().contains(static_cast<Vector2f>(mousePos))) {
@@ -545,7 +553,7 @@ int main() {
                 Score = 0;
             }
 
-            if (Keyboard::isKeyPressed(Keyboard::L)) {
+            if (Keyboard::isKeyPressed(Keyboard::Space)) {
                 if (!isPlayingSurvie) {
                     isPlayingSurvie = true;
                 }
@@ -743,7 +751,6 @@ int main() {
                             while (ResultatAdversaire < 17) {
                                 int CarteAdv = (rand() % 9) + 1;
                                 ResultatAdversaire += CarteAdv;
-                                //cerr << "Resultat de l'adversaire : " << ResultatAdversaire << endl;
                             }
                             AdversairePlaying = false;
 
@@ -803,23 +810,29 @@ int main() {
             }
         }
 
-        if (SurvieBall1.getPosition().x <= 100 || SurvieBall1.getPosition().x + SurvieBall1.getRadius() * 2 >= 1920) {
-            vitesse.x = -vitesse.x;
-        }
+#pragma endregion Boutons & Keyboard
 
-        if (SurvieBall1.getPosition().y <= 100 || SurvieBall1.getPosition().y + SurvieBall1.getRadius() * 2 >= 1080) {
-            vitesse.y = -vitesse.y;
+
+        Vector2f playerPos = OrangeBoxSprite.getPosition();
+        Vector2f enemyPos = SurvieBall1.getPosition();
+        Vector2f direction = playerPos - enemyPos;
+
+        float length = sqrt(direction.x * direction.x + direction.y * direction.y);
+        if (length != 0) {
+            direction /= length; 
         }
         if (SurvieBall1.getGlobalBounds().intersects(OrangeBoxSprite.getGlobalBounds())) {
             isPlayingSurvie = false;
             OrangeBoxSprite.setPosition(1000, 600);
             SurvieBall1.setPosition(700, 900);
             currentState = Menu;
+            speed = 2.f;
         }
 
         if (SupplyBox.getGlobalBounds().intersects(OrangeBoxSprite.getGlobalBounds())) {
             Score += 10;
             NewPlusPos();
+            speed *= 1.5f;
             SupplyBox.setPosition(GreenX, GreenY);
         }
 
@@ -851,14 +864,19 @@ int main() {
         ResultatAdversaireText.setString(ResuAdvString);
 
         switch (currentState) {
+
         case Menu:
+            window.draw(Background1);
+            if (HelpList) {
+
+                break;
+            }
             if (showMainMenu) {
                 MainMenu1.setPosition(1320 * scaleX, 295 * scaleY);
                 MainMenu2.setPosition(1320 * scaleX, 450 * scaleY);
                 MainMenu3.setPosition(1320 * scaleX, 605 * scaleY);
                 MainMenu4.setPosition(1320 * scaleX, 760 * scaleY);
                 
-                window.draw(Background1);
                 window.draw(MainMenu1);
                 window.draw(MainMenu2);
                 window.draw(MainMenu3);
@@ -879,7 +897,6 @@ int main() {
             }
             else {
                 Button.setPosition(1115 * scaleX, 620 * scaleY);
-                window.draw(Background1);
                 window.draw(Menu3);
                 window.draw(Menu2);
                 window.draw(Menu1);
@@ -949,7 +966,7 @@ int main() {
                 window.draw(€);
                 window.draw(SupplyBox);
                 if (isPlayingSurvie) {
-                    SurvieBall1.move(vitesse);
+                    SurvieBall1.move(direction * speed);
                 }                             
                 break;
             case Dice:
